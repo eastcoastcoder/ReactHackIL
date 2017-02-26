@@ -3,12 +3,7 @@
 	text-align:center;
 }
 
-html, body, div#root, div.jumbotron{
-	
-    height: 100%;
-}
-
-body {
+body{
 	
   background-color:#eee;
   margin: 0;
@@ -16,7 +11,12 @@ body {
   font-family: sans-serif;
 }
 
-div.row>div{
+div#main{
+	
+	display:flex;
+}
+
+div#main>div{
 	
 	padding-top: 10px;
     padding-bottom: 10px;
@@ -24,14 +24,33 @@ div.row>div{
     border: 1px solid rgba(86,61,124,.2);
 }
 
-div.row::nth-child(1){
+div#main>div:nth-child(2){
 	
 	padding:0;
+}
+
+div#main>div>h3{
+	
+	background-color:gray;
+	color:#eee;
+	margin:0;
+	padding:10px 0;
+	width:100%;
 }
 
 .page-header{
 	
 	margin-top:5.5em;
+}
+
+.container{
+	
+	width:90%;
+}
+
+.member{
+	
+	height:3em;
 }
 
 #buttons Button{
@@ -48,3 +67,4 @@ div.row::nth-child(1){
 	
 	width: 33%;
 }
+
