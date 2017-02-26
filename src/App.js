@@ -20,10 +20,8 @@ class App extends Component {
         </Navbar>
         <Jumbotron>
           <Grid>
-            <h1>Welcome to React</h1>
-            <p>
+            <h1 id = 'title'>GenCompare</h1>
               <ButtonToolbar id = 'buttons'>
-                {/* Standard button */}
                 {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
                 <Button bsStyle="primary">Primary</Button>
 
@@ -42,14 +40,6 @@ class App extends Component {
                 {/* Deemphasize a button by making it look like a link while maintaining button behavior */}
                 <Button bsStyle="link">Link</Button>
               </ButtonToolbar>
-              <Button
-                bsStyle="success"
-                bsSize="large"
-                href="http://react-bootstrap.github.io/components.html"
-                target="_blank">
-                View React Bootstrap Docs
-              </Button>
-            </p>
           </Grid>
         </Jumbotron>
       </div>

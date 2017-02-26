@@ -3,8 +3,25 @@
 	text-align:center;
 }
 
+html, body, div#root, div.jumbotron{
+	
+    height: 100%;
+}
+
 body {
+	
+  background-color:#eee;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+#buttons Button{
+	
+	float: none;
+}
+
+#title{
+	
+	color:#888;
 }
