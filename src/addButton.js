@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, FormControl, Glyphicon, InputGroup, Modal } from 'react-bootstrap';
+import {Button, FormControl, Glyphicon, InputGroup, Modal} from 'react-bootstrap';
+import NameButtons from './data.js';
 
-class Patient extends React.Component{
+class AddButton extends React.Component{
 	
 	constructor(props){
 	
@@ -50,9 +51,8 @@ class Patient extends React.Component{
 					</Modal.Header>
 			  
 					<Modal.Body>
-						<h4>Text in a modal</h4>
-						<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-						
+					
+						<NameButtons />
 					</Modal.Body>
 				</Modal>
 			</div>
@@ -60,4 +60,4 @@ class Patient extends React.Component{
 	}
 }
 
-export default Patient;
+export default AddButton;

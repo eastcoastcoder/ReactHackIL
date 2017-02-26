@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Navbar, Button, ButtonToolbar, Grid, PageHeader, Row, Col} from 'react-bootstrap';
+import {Navbar, Button, ButtonToolbar, Grid, PageHeader, Row, Col} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
