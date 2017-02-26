@@ -1,7 +1,5 @@
 import React from 'react';
 import {Button, ButtonGroup, FormControl, Glyphicon, InputGroup, Modal} from 'react-bootstrap';
-import NameButtons from './data.js';
-import familyButton from './familyButton.js';
 import ReactDOM from 'react-dom';
 
 var people = [
@@ -42,8 +40,6 @@ class AddButtons extends React.Component{
 	render(){
 		
 		var rows = [];
-		
-		console.log(this.props.count);
 		
 		for (var i=0; i < this.props.count; i++){
 		
