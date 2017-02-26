@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Navbar, Button, ButtonToolbar, Grid, PageHeader} from 'react-bootstrap';
+import { Navbar, Button, ButtonToolbar, Grid, PageHeader, Row, Col} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
-var Menu = require('react-burger-menu').push;
 
 class App extends Component {
   render() {
@@ -57,6 +56,10 @@ class App extends Component {
         <PageHeader>GenCompare</PageHeader>
             <Grid>
                 <ButtonToolbar id = 'buttons'>
+					<Row id='main' className="show-grid">
+						<Col id='tree' xs={12} md={8}></Col>
+						<Col xs={6} md={4}><h3>Family Medical History</h3><div></div></Col>
+					</Row>
                 </ButtonToolbar>
             </Grid>
             

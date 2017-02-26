@@ -18,8 +18,7 @@ div#main{
 
 div#main>div{
 	
-	padding-top: 10px;
-    padding-bottom: 10px;
+	padding:0;
     background-color: rgba(86,61,124,.15);
     border: 1px solid rgba(86,61,124,.2);
 }
@@ -27,6 +26,8 @@ div#main>div{
 div#main>div:nth-child(2){
 	
 	padding:0;
+	display: flex;
+    flex-direction: column;
 }
 
 div#main>div>h3{
@@ -36,7 +37,29 @@ div#main>div>h3{
 	margin:0;
 	padding:10px 0;
 	width:100%;
+	flex:0;
 }
+
+div#tree>div{
+	
+	display:flex;
+	height:10em;
+}
+
+div#tree>div>div{
+	
+	background-image: url("branches.svg");
+	background-size: 100% 10em;
+	display:inline-block;
+	flex:1;
+}
+
+div#tree>div>div>button{
+	
+	top: 4.5em;
+    position: relative;
+}
+
 
 .page-header{
 	
@@ -67,4 +90,3 @@ div#main>div>h3{
 	
 	width: 33%;
 }
-

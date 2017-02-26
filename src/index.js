@@ -54,4 +54,4 @@ fetch('https://ipl-nonproduction-customer_validation.e-imo.com/api/v3/actions/ca
 		console.log(body);
 });
 
-ReactDOM.render(<Patient person = {people[1]}/>, document.getElementById('buttons'));
+ReactDOM.render(<Patient person = {people[1]}/>, document.getElementById('tree'));
