@@ -22,10 +22,8 @@ class App extends Component {
           <Grid>
             <h1>Welcome to React</h1>
             <p>
-              <ButtonToolbar>
+              <ButtonToolbar id = 'buttons'>
                 {/* Standard button */}
-                <Button>Default</Button>
-
                 {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
                 <Button bsStyle="primary">Primary</Button>
 
