@@ -6,7 +6,7 @@ __Project Description__
   + Displays the most frequently shared illnesses among all familiy members' data.  
   
 ## Contributor Guide  
-[LINK TO CONTRIBUTING.md]
+[CONTRIBUTING.md](https://github.com/ethanx94/ReactHackIL/blob/master/CONTRIBUTING.md)
 
 ##MIT License
 
