@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 import Patient from './people';
+import Button from 'react-bootstrap';
 
 ReactDOM.render(
   <App />,
@@ -49,8 +50,11 @@ fetch('https://ipl-nonproduction-customer_validation.e-imo.com/api/v3/actions/ca
 	})
 	.then(function(response) {
 		return response.json()
-	}).then(function(body) {
-		document.getElementById('history').innerHTML = JSON.stringify(body);
+	}).then(function(body) {	
+		body.Categories.map(function (val) {
+			document.getElementById('history').innerHTML += val.Name + ' '; 
+		});
+		// document.getElementById('history') = JSON.stringify(body);
 		console.log(body);
 });
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, FormControl, Glyphicon, InputGroup, Modal} from 'react-bootstrap';
+import { Button, FormControl, Glyphicon, InputGroup, Modal } from 'react-bootstrap';
 
 class Patient extends React.Component{
 	
