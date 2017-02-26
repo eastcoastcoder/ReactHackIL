@@ -15,7 +15,7 @@ class Patient extends React.Component{
 			
 			<Row id='main' className="show-grid">
 				<Col xs={12} md={8}><div class="member"><Button>{this.props.person.fName + ' ' + this.props.person.lName}</Button></div></Col>
-				<Col xs={6} md={4}><h3>Family Medical History</h3></Col>
+				<Col xs={6} md={4}><h3>Family Medical History</h3><div id = 'history'></div></Col>
 			</Row>
 		);
 	}
