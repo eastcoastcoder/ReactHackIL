@@ -43,6 +43,7 @@ div#main>div>h3{
 div#tree>div{
 	
 	display:flex;
+	flex-direction:horizontal;
 	height:10em;
 }
 

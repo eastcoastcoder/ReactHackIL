@@ -47,4 +47,4 @@ fetch('https://ipl-nonproduction-customer_validation.e-imo.com/api/v3/actions/ca
 		console.log(body);
 });
 
-ReactDOM.render(<AddButton />, document.getElementById('tree'));
+ReactDOM.render(<AddButton ki={1}/>, document.getElementById('tree'));
