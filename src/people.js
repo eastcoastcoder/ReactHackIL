@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Jumbotron, Button, ButtonToolbar, Grid } from 'react-bootstrap';
+import { Navbar, Jumbotron, Button, ButtonToolbar, Grid, Row, Col} from 'react-bootstrap';
 
 class Patient extends React.Component{
 	
@@ -12,7 +12,11 @@ class Patient extends React.Component{
 		
 		return(
 		
-			<Button>{this.props.person.fName + ' ' + this.props.person.lName}</Button>
+			
+			<Row className="show-grid">
+				<Col xs={12} md={8}><Button>{this.props.person.fName + ' ' + this.props.person.lName}</Button></Col>
+				<Col xs={6} md={4}><h3>Family Medical History</h3></Col>
+			</Row>
 		);
 	}
 }

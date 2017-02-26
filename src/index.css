@@ -16,6 +16,24 @@ body {
   font-family: sans-serif;
 }
 
+div.row>div{
+	
+	padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid rgba(86,61,124,.2);
+}
+
+div.row::nth-child(1){
+	
+	padding:0;
+}
+
+.page-header{
+	
+	margin-top:5.5em;
+}
+
 #buttons Button{
 	
 	float: none;
@@ -24,4 +42,9 @@ body {
 #title{
 	
 	color:#888;
+}
+
+#listProblems{
+	
+	width: 33%;
 }
