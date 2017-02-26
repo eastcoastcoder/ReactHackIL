@@ -3,12 +3,12 @@ import {Button, ButtonGroup} from 'react-bootstrap';
 
 var people = [
 	
-	{'fName':'Jen', 'lName':'Earl', 'problems':[1, ]},
+	{'fName':'Jen', 'lName':'Earl', 'problems':[1]},
 	{'fName':'Lou', 'lName':'Tenant', 'problems':[]},
 	{'fName':'Jack', 'lName':'Hammer', 'problems':[]},
-	{'fName':'Grey', 'lName':'Earl', 'problems':[1, ]},
+	{'fName':'Grey', 'lName':'Earl', 'problems':[1]},
 	{'fName':'Grandma', 'lName':'Earl', 'problems':[]},
-	{'fName':'Grandpa', 'lName':'Earl', 'problems':[1, ]},
+	{'fName':'Grandpa', 'lName':'Earl', 'problems':[1]},
 	{'fName':'Sam', 'lName':'Tenant', 'problems':[]},
 	{'fName':'Dad', 'lName':'Earl', 'problems':[]}
 ];

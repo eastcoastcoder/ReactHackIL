@@ -1,7 +1,36 @@
 import React from 'react';
-import {Button, FormControl, Glyphicon, InputGroup, Modal} from 'react-bootstrap';
+import {Button, ButtonGroup, FormControl, Glyphicon, InputGroup, Modal} from 'react-bootstrap';
 import NameButtons from './data.js';
+import familyButton from './familyButton.js';
 import ReactDOM from 'react-dom';
+
+var people = [
+	
+	{'fName':'Jen', 'lName':'Earl', 'problems':[1]},
+	{'fName':'Lou', 'lName':'Tenant', 'problems':[]},
+	{'fName':'Jack', 'lName':'Hammer', 'problems':[]},
+	{'fName':'Grey', 'lName':'Earl', 'problems':[1]},
+	{'fName':'Grandma', 'lName':'Earl', 'problems':[]},
+	{'fName':'Grandpa', 'lName':'Earl', 'problems':[1]},
+	{'fName':'Sam', 'lName':'Tenant', 'problems':[]},
+	{'fName':'Dad', 'lName':'Earl', 'problems':[]}
+];
+
+class NameButton extends React.Component{
+	
+	constructor(props){
+	
+		super(props);
+	}
+	
+	render(){
+		
+		return(
+		
+			<Button onClick={() => this.props.onClick(this.props.person.fName + " " +this.props.person.lName)}>{this.props.person.fName + ' ' + this.props.person.lName}</Button>
+		);
+	}
+}
 
 class AddButtons extends React.Component{
 	
@@ -35,7 +64,8 @@ class AddButton extends React.Component{
 		super(props);
 		this.state = {
 			
-			showModal: false 
+			showModal: false,
+			text:"Add"
         };
 		
 		this.close = this.close.bind(this);
@@ -58,7 +88,7 @@ class AddButton extends React.Component{
 		this.setState({ showModal: true });
 	}
 	
-	growTree(){
+	growTree(names){
 		
 		if(Math.pow(2, document.getElementById('tree').childElementCount - 1) <= this.props.ki){
 			
@@ -70,15 +100,34 @@ class AddButton extends React.Component{
 			tree.removeChild(tree.firstChild);
 			tree.insertBefore(actualFirst, tree.firstChild);
 		}
+		
+		
+		this.setState({showModal: false, text:names});
+		this.close();
+		/*var k = 1;
+			
+		while(Math.pow(2, k) < this.props.ki){
+			
+			k++;
+		}
+		
+		var subIndex = this.props.ki - Math.pow(2, k - 1); */
 	}
 	
 	render(){
+	
+		var rows = [];
 		
+		for (var i=0; i < people.length; i++){
+		
+			rows.push(<NameButton person={people[i]} key={i} onClick={this.growTree}/>);
+		}
+	
 		return(
 		
 			<div>
 				<div>
-					<Button onClick={this.open}><Glyphicon glyph="plus"/>{'  ' + /*this.props.person.fName + */ 'Add' /* + this.props.person.lName*/}</Button>
+					<Button onClick={this.open}><Glyphicon glyph="plus"/>{'  ' + /*this.props.person.fName + */ this.state.text /* + this.props.person.lName*/}</Button>
 				</div>
 				
 				<Modal show={this.state.showModal} onHide={this.close}>
@@ -93,7 +142,7 @@ class AddButton extends React.Component{
 			  
 					<Modal.Body>
 					
-						<NameButtons onChildClick={this.growTree}/>
+						<ButtonGroup vertical block>{rows}</ButtonGroup>
 					</Modal.Body>
 				</Modal>
 			</div>
